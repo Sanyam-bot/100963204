@@ -43,3 +43,71 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+ @font-face {
+  font-family: myFirstFont;
+  src: url(mouldy-cheese-font/MouldyCheeseRegular-WyMWG.ttf);
+} 
+
+body {
+  font-family: serif;
+	font-size: 10px;
+	line-height: 15px;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+}
+
+h1, h2{
+  font-family: myFirstFont, sans-serif;
+}
+
+h1{
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+section h2 + p{
+	text-indent: 20px;
+}
+
+a:visited{
+	color: #a66;
+	font-weight: bold;
+}
+
+a:focus{
+	color: rgb(186, 22, 22);
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover{
+	color: black;
+	text-decoration: none;
+}
+
+a:active {
+	color: white;
+	background-color: #a66;  
+}
+
+ol li,
+ul li {
+	line-height: 15px;
+}
+
+ol, ul{
+	margin-top: 15px;
+}
+
+ul {
+	list-style-type: square;
+}
+
+nav ul li{
+  list-style-type: none;
+  border: 1px solid #a66;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
