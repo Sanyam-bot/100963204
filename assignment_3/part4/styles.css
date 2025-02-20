@@ -3,49 +3,86 @@ body {
     color: #333;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
-  }
+}
 
-  img {
-      max-width: 100%;
-      display: block;
-  }
-  
-  .logo {
-    font-size: 200%;
-    padding: 50px 20px;
-    margin: 0 auto;
-    max-width: 980px;
-  }
-  
-  .grid {
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.logo {
+	font-size: 200%;
+	padding: 50px 20px;
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+.grid {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
-  }
-  
-  nav {
-    background-color: #000;
-    padding: .5em;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: .5em 1em;
-  }
-  
-  .photos {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
 
-  .feature {
-      width: 200px;
-  }
+article{
+	flex: 2;
+	min-width: 300px;
+}
+
+aside{
+	flex: 1px;
+	min-width: 250px;
+}
+
+nav {
+	background-color: #000;
+	padding: .5em;
+	position: sticky; /* To make it stick */
+	top: 0;          
+	z-index: 1000;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: .5em 1em;
+}
+
+.photos {
+	padding: 0;
+	margin: 0;
+	width: 250px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+	list-style: none;
+	gap: 1px;
+}
+
+
+.photos li img {
+    height: 120px;
+	width: 110%;
+}
+
+.feature {
+	width: 200px;
+}
+
+nav ul li {
+	padding: 90px;
+	display: inline;
+}
+
+h1 + img{
+	float: left;
+	margin-right: 10px;
+}
