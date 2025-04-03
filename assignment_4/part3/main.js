@@ -20,21 +20,22 @@ function randomRGB() {
 
 class Ball {
 	constructor(x, y, velX, velY, color, size) {
-		this.x = x;
-		this.y = y;
-		this.velX = velX;
-		this.velY = velY;
-		this.color = color;
-		this.size = size;
+		this.x = x; // X-coordinate
+		this.y = y; // Y-coordinate
+		this.velX = velX; // Horizontal velocity
+		this.velY = velY; // Vertical velocity
+		this.color = color; // Ball color
+		this.size = size; // Ball radius
 	}
 
+	// method to draw a ball on canvas
 	draw() {
 		ctx.beginPath();
 		ctx.fillStyle = this.color;
 		ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
 		ctx.fill();
 	}
-
+	// Method to handle boundary collisions
 	update() {
 		if ((this.x + this.size) >= width) {
 		  this.velX = -(this.velX);
@@ -55,6 +56,7 @@ class Ball {
 		this.x += this.velX;
 		this.y += this.velY;
 	}
+	// Method to detect collisions between balls and change their colors upon impact
 	collisionDetect() {
 		for (const ball of balls) {
 			if (this !== ball) {
@@ -70,7 +72,7 @@ class Ball {
 	}
 }
 
-  const testBall = new Ball(50, 100, 4, 4, "blue", 10);
+const testBall = new Ball(50, 100, 4, 4, "blue", 10);
 
 testBall.x;
 testBall.size;
@@ -79,6 +81,7 @@ testBall.draw();
 
 const balls = [];
 
+// create 25 balls and store them in balls array
 while (balls.length < 25) {
   	const size = random(10, 20);
   	const ball = new Ball(
@@ -94,6 +97,7 @@ while (balls.length < 25) {
 	balls.push(ball);	
 }
 
+// To animate the balls
 function loop() {
 	ctx.fillStyle = "rgb(0 0 0 / 25%)";
 	ctx.fillRect(0, 0, width, height);
