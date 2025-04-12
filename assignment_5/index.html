@@ -35,7 +35,8 @@
 		</ul>
 
 		<form class="search">
-			<input type="search" name="q" placeholder="Search query">
+			<!-- Added aria-label for screen readers -->
+			<input type="search" name="q" placeholder="Search query" aria-label="Search the site">
 			<input type="submit" value="Go!">
 		</form>
 	</nav>
@@ -60,7 +61,9 @@
 		<p>
 			Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.
 		</p>
-		<table>
+		<!-- Added summary and caption, so the screen reader can understand the table structure. -->
+		<table summary="A comparison of bears by coat, size, habitat, lifespan, and diet.">
+			<caption>Comparison of Wild and Urban Bears</caption>
 			<thead>
 			<tr>
 				<!-- Used <th></th> for the headings, instead of <td></td>,
@@ -141,7 +144,8 @@
 
 			</aside>
 			<section class="comments">
-			<div class="show-hide">Show comments</div>
+			<!-- Now, the .show-hide is also clickable -->
+			<button class="show-hide">Show comments</button>
 
 			<div class="comment-wrapper">
 
@@ -149,11 +153,11 @@
 
 				<form class="comment-form">
 				<div class="flex-pair">
-					Your name:
+					<label for="name">Your name:</label>
 					<input type="text" name="name" id="name" placeholder="Enter your name">
 				</div>
 				<div class="flex-pair">
-					Your comment:
+					<label for="comment">Your comment:</label>
 					<input type="text" name="comment" id="comment" placeholder="Enter your comment">
 				</div>
 				<div>
