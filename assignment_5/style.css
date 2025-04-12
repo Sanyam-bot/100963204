@@ -17,8 +17,10 @@ body {
 }
 
 /* || typography */
-
-font[size="7"], font[size="6"], font[size="5"] {
+/* In typography area, I replaced font[size="7"] --> h1, font[size="6"] --> h2, font[size="5"] --> h3
+  , .nav div --> nav  
+*/
+h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
   color: #2a2a2a;
 }
@@ -28,19 +30,20 @@ p, input, li, table, label {
   color: #2a2a2a;
 }
 
-font[size="7"] {
+/* Beacuse I changed font size = 7 to h1, in html file */
+h1 {
   font-size: 4rem;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 10px black;
 }
 
-font[size="6"] {
+h2 {
   font-size: 3rem;
   text-align: center;
 }
 
-font[size="5"] {
+h3 {
   font-size: 2.2rem;
 }
 
@@ -51,7 +54,8 @@ p, li, table {
 
 /* || header layout */
 
-div[class="nav"], article, footer, .secondary {
+/* Replaced div[class="nav"] with nav, because that's what I did in HTML file */
+nav, article, footer, .secondary {
   background-color: #F5F5F5;
 }
 
@@ -63,7 +67,8 @@ article {
   margin-right: 10px;
 }
 
-div[class="nav"] {
+/* Replaced div[class="nav"] with nav, because that's what I did in HTML file */
+nav {
   height: 50px;
   background-color: ff80ff;
   display: flex;
@@ -71,20 +76,23 @@ div[class="nav"] {
   margin-bottom: 10px;
 }
 
-div[class="nav"] ul {
+/* Replaced div[class="nav"] with nav, because that's what I did in HTML file */
+nav ul {
   padding: 0;
   list-style-type: none;
   flex: 2;
   display: flex;
 }
 
-div[class="nav"] li {
+/* Replaced div[class="nav"] with nav, because that's what I did in HTML file */
+nav li {
   display: inline;
   text-align: center;
   flex: 1;
 }
 
-div[class="nav"] a {
+/* Replaced div[class="nav"] with nav, because that's what I did in HTML file */
+nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -92,7 +100,8 @@ div[class="nav"] a {
   color: black;
 }
 
-div[class="nav"] .search {
+/* Replaced div[class="nav"] with nav, because that's what I did in HTML file */
+nav .search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -181,11 +190,11 @@ audio {
   cursor: pointer;
 }
 
-.comments font[size="6"] {
+.comments h2 {
   font-size: 2rem;
 }
 
-.comments font[size="6"]:nth-of-type(2) {
+.comments h3:nth-of-type(2) {
   margin-bottom: 0;
 }
 
